@@ -29,8 +29,8 @@ def backupToZip(folder):
         backupZip.write(foldername)
         # Add all the files in this folder to the ZIP file.
         for filename in filenames:
-            newBase / os.path.basename(folder) + '_'
-            if filename.startswith(newBase) and filename.endswith('.zip')
+            newBase = os.path.basename(folder) + '_'
+            if filename.startswith(newBase) and filename.endswith('.zip'):
                 continue # don't backup the backup ZIP files
             backupZip.write(os.path.join(foldername, filename))
     backupZip.close()
